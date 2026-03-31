@@ -1,0 +1,145 @@
+Network:attemptReverseReach
+Network:reverseReach
+ConnectionRule:attemptConnectToApplicationsUninspected
+ConnectionRule:connectToApplicationsUninspected
+ConnectionRule:attemptReverseReach
+ConnectionRule:reverseReach
+Linux Server:networkConnectInspected
+Linux Server:specificAccessNetworkConnect
+fherbert:attemptAssume
+fherbert:successfulAssume
+fherbert:assume
+Linux Server:specificAccessAuthenticate
+Linux Server:specificAccessFromNetworkConnection
+Linux Server:specificAccess
+Linux Server:specificAccessModify
+Linux Server:specificAccessRead
+Linux Server:attemptReverseReach
+Linux Server:successfulReverseReach
+Linux Server:reverseReach
+Linux Server:attemptUseVulnerability
+Linux Server:successfulUseVulnerability
+Linux Server:useVulnerability
+setuid binary:attemptAbuse
+setuid binary:abuse
+setuid binary:attemptExploit
+setuid binary:exploitTrivially
+setuid binary:exploit
+setuid binary:impact
+setuid binary:read
+Linux Server:read
+/etc/passwd:attemptRead
+/etc/passwd:successfulRead
+/etc/passwd:read
+/etc/passwd:attemptReverseReach
+/etc/passwd:reverseReach
+/etc/passwd:extract
+hashed root creds:read
+hashed root creds:attemptUse
+hashed root creds:use
+hashed root creds:extract
+root creds:guessCredentialsFromHash
+root creds:guessCredentials
+root creds:extract
+/home/fherbert/.ssh:authorizedReadFromApplication
+/home/fherbert/.ssh:authorizedReadFromIAM
+/home/fherbert/.ssh:authorizedRead
+/home/fherbert/.ssh:attemptRead
+/home/fherbert/.ssh:successfulRead
+/home/fherbert/.ssh:read
+/home/fherbert/.ssh:attemptReverseReach
+/home/fherbert/.ssh:reverseReach
+/home/fherbert/.ssh:extract
+fherbert SSH keys:extract
+fherbert@WORKGROUP:attemptAssume
+fherbert@WORKGROUP:successfulAssume
+fherbert@WORKGROUP:assume
+User Machine 1:specificAccessAuthenticate
+User Machine 1:networkConnectInspected
+User Machine 1:specificAccessNetworkConnect
+User Machine 1:specificAccessFromNetworkConnection
+User Machine 1:specificAccess
+User Machine 1:specificAccessRead
+User Machine 1:attemptReverseReach
+User Machine 1:successfulReverseReach
+User Machine 1:reverseReach
+Browser DB:authorizedReadFromIAM
+Browser DB:authorizedReadFromApplication
+Browser DB:authorizedRead
+Browser DB:attemptRead
+Browser DB:successfulRead
+Browser DB:read
+Browser DB:attemptReverseReach
+Browser DB:reverseReach
+Browser DB:extract
+Browser Creds:extract
+User Machine 1:attemptUseVulnerability
+User Machine 1:successfulUseVulnerability
+User Machine 1:useVulnerability
+mslog.exe:attemptAbuse
+mslog.exe:inherentUserInteraction
+mslog.exe:userInteractionAchieved
+mslog.exe:abuse
+mslog.exe:attemptExploit
+mslog.exe:exploitTrivially
+mslog.exe:exploit
+mslog.exe:impact
+mslog.exe:read
+User Machine 1:read
+C/Windows/System32/mslog.txt:attemptRead
+C/Windows/System32/mslog.txt:successfulRead
+C/Windows/System32/mslog.txt:read
+C/Windows/System32/mslog.txt:attemptReverseReach
+C/Windows/System32/mslog.txt:reverseReach
+C/Windows/System32/mslog.txt:extract
+patreides pass:read
+patreides pass:extract
+patreides pass:attemptUse
+patreides pass:use
+patreides:attemptAssume
+patreides:successfulAssume
+patreides:assume
+Domain Controller:networkConnectInspected
+Domain Controller:networkConnect
+Domain Controller:authenticate
+Domain Controller:networkAccess
+Domain Controller:fullAccess
+Domain Controller:attemptModify
+Domain Controller:successfulModify
+Domain Controller:modify
+Domain Controller:attemptReverseReach
+Domain Controller:successfulReverseReach
+Domain Controller:reverseReach
+# notPeya Encrypt Users folder on DC
+arrakis Users Folder:attemptWrite
+arrakis Users Folder:successfulWrite
+arrakis Users Folder:write
+arrakis Users Folder:attemptDelete
+arrakis Users Folder:successfulDelete
+arrakis Users Folder:delete
+arrakis Users Folder:attemptDeny
+arrakis Users Folder:successfulDeny
+arrakis Users Folder:deny
+# notPeya Encrypt Users folder on the two User machines User Machine 1 and User Machine 2
+User Machine 2:networkConnectUninspected
+User Machine 2:networkConnect
+User Machine 2:authenticate
+User Machine 2:networkAccess
+User Machine 2:fullAccess
+User Machine 2:attemptDeny
+User Machine 2:successfulDeny
+User Machine 2:deny
+quadra Users Folder:attemptDeny
+quadra Users Folder:successfulDeny
+quadra Users Folder:deny
+User Machine 1:networkConnectUninspected
+User Machine 1:networkConnect
+User Machine 1:authenticate
+User Machine 1:networkAccess
+User Machine 1:fullAccess
+User Machine 1:attemptDeny
+User Machine 1:successfulDeny
+User Machine 1:deny
+gammu Users Folder:attemptDeny
+gammu Users Folder:successfulDeny
+gammu Users Folder:deny

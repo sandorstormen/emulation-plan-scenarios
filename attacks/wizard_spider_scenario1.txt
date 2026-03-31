@@ -1,0 +1,115 @@
+judy:successfulUnsafeUserActivity
+judy:unsafeUserActivity
+Outlook:attemptUnsafeUserActivity
+Outbound:attemptConnectToApplicationsUninspected
+Outbound:bypassRestricted
+Outbound:connectToApplicationsUninspected
+User Machine 1:attemptUnsafeUserActivity
+WAN:attemptReverseReach
+WAN:reverseReach
+Outbound:attemptReverseReach
+Outbound:reverseReach
+User Machine 1:attemptReverseReach
+User Machine 1:successfulReverseReach
+User Machine 1:reverseReach
+User Machine 1:attackerUnsafeUserActivityCapabilityWithReverseReach
+User Machine 1:attackerUnsafeUserActivityCapability
+User Machine 1:successfulUnsafeUserActivity
+User Machine 1:unsafeUserActivity
+User Machine 1:networkConnectUninspected
+User Machine 1:specificAccessNetworkConnect
+judy:successfulAssume
+judy:assume
+User Machine 1:specificAccessAuthenticate
+User Machine 1:specificAccessFromNetworkConnection
+User Machine 1:specificAccess
+User Machine 1:specificAccessModify
+Outlook:localConnect
+Outlook:authenticate
+Outlook:localAccess
+Outlook:fullAccess
+Outlook:attemptRead
+Outlook:successfulRead
+Outlook:read
+Outlook:attemptReverseReach
+Outlook:successfulReverseReach
+Outlook:reverseReach
+E-Mail Store:attemptRead
+E-Mail Store:successfulRead
+E-Mail Store:read
+E-Mail Store:attemptReverseReach
+E-Mail Store:reverseReach
+E-Mail Store:extract
+bill Password E-Mail:read
+bill Password E-Mail:extract
+bill Password E-Mail:attemptUse
+bill Password E-Mail:use
+bill:attemptAssume
+bill:successfulAssume
+bill:assume
+User Machine 1:accessNetworkAndConnections
+Internal:attemptConnectToApplicationsUninspected
+Internal:connectToApplicationsUninspected
+User Machine 2:networkConnectUninspected
+User Machine 2:specificAccessNetworkConnect
+User Machine 2:specificAccessAuthenticate
+User Machine 2:specificAccessFromNetworkConnection
+User Machine 2:specificAccess
+User Machine 2:specificAccessRead
+Service Ticket:authorizedReadFromApplication
+User Machine 2:attemptReverseReach
+User Machine 2:successfulReverseReach
+User Machine 2:reverseReach
+Service Ticket:authorizedReadFromIAM
+Service Ticket:authorizedRead
+Service Ticket:attemptRead
+Service Ticket:successfulRead
+Service Ticket:read
+Service Ticket:attemptReverseReach
+Service Ticket:reverseReach
+Service Ticket:extract
+vfleming Hashed Credentials:read
+vfleming Hashed Credentials:extract
+vfleming Hashed Credentials:attemptUse
+vfleming Hashed Credentials:use
+vfleming Credentials:guessCredentialsFromHash
+vfleming Credentials:guessCredentials
+vfleming Credentials:attemptUse
+vfleming Credentials:use
+vfleming:attemptAssume
+vfleming:successfulAssume
+vfleming:assume
+Domain Controller:authenticate
+Domain Controller:networkConnectUninspected
+Domain Controller:networkConnect
+Domain Controller:networkAccess
+Domain Controller:fullAccess
+Domain Controller:attemptRead
+Domain Controller:successfulRead
+Domain Controller:read
+Internal:attemptReverseReach
+Internal:reverseReach
+Domain Controller:attemptReverseReach
+Domain Controller:successfulReverseReach
+Domain Controller:reverseReach
+ntds.dit:attemptRead
+ntds.dit:successfulRead
+ntds.dit:read
+ntds.dit:attemptReverseReach
+ntds.dit:reverseReach
+ntds.dit:extract
+DC vfleming Hashed Credentials:extract
+DC bill Hashed Credentials:extract
+DC judy Hashed Credentials:extract
+# --- Starting Ransomware ---
+Domain Controller:attemptDeny
+Domain Controller:successfulDeny
+Domain Controller:deny
+User Machine 2:specificAccessDelete
+User Machine 2:authenticate
+User Machine 2:networkConnect
+User Machine 2:networkAccess
+User Machine 2:fullAccess
+User Machine 2:attemptDeny
+User Machine 2:successfulDeny
+User Machine 2:deny

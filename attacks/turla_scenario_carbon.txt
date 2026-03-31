@@ -1,0 +1,148 @@
+Gunter Human:successfulSocialEngineering
+Gunter Human:socialEngineering
+Gunter Human:unsafeUserActivity
+Gunter:attemptUnsafeUserActivity
+Gunter:successfulUnsafeUserActivity
+Gunter:unsafeUserActivity
+Workstation 1:attemptUnsafeUserActivity
+WAN:attemptReverseReach
+WAN:reverseReach
+Outbound:attemptReverseReach
+Outbound:reverseReach
+Workstation 1:attemptReverseReach
+Workstation 1:successfulReverseReach
+Workstation 1:reverseReach
+Workstation 1:attackerUnsafeUserActivityCapabilityWithReverseReach
+Workstation 1:attackerUnsafeUserActivityCapability
+Workstation 1:successfulUnsafeUserActivity
+Workstation 1:unsafeUserActivity
+Workstation 1:networkConnectUninspected
+Workstation 1:specificAccessNetworkConnect
+Gunter:attemptAssume
+Gunter:successfulAssume
+Gunter:assume
+Workstation 1:specificAccessAuthenticate
+Workstation 1:specificAccessFromNetworkConnection
+Workstation 1:specificAccess
+Workstation 1:attemptUseVulnerability
+Workstation 1:successfulUseVulnerability
+Workstation 1:useVulnerability
+Misconfigured service registry permissions:networkAccessAchieved
+Misconfigured service registry permissions:lowPrivilegesAchieved
+Misconfigured service registry permissions:userInteractionAchieved
+Misconfigured service registry permissions:attemptAbuse
+Misconfigured service registry permissions:abuse
+Misconfigured service registry permissions:attemptExploit
+Misconfigured service registry permissions:exploitTrivially
+Misconfigured service registry permissions:exploit
+Misconfigured service registry permissions:impact
+Misconfigured service registry permissions:read
+Workstation 1:read
+Domain Share:attemptRead
+Domain Share:successfulRead
+Domain Share:read
+Domain Share:attemptReverseReach
+Domain Share:reverseReach
+Domain Share:extract
+Password Spray Target:read
+Password Spray Target:extract
+Password Spray Target:attemptUse
+Password Spray Target:use
+Frieda Creds:guessCredentialsFromHash
+Frieda Creds:guessCredentials
+Frieda Creds:attemptUse
+Frieda Creds:use
+Frieda:attemptAssume
+Frieda:successfulAssume
+Frieda:assume
+Workstation 1:accessNetworkAndConnections
+Internal:attemptConnectToApplicationsUninspected
+Internal:connectToApplicationsUninspected
+Domain Controller:networkConnectUninspected
+Domain Controller:authenticate
+Domain Controller:networkConnect
+Domain Controller:networkAccess
+Domain Controller:fullAccess
+Domain Controller:attemptRead
+Domain Controller:successfulRead
+Domain Controller:read
+LSASS:attemptRead
+LSASS:successfulRead
+LSASS:read
+Adalwofa NTLM Hash:read
+Internal:attemptReverseReach
+Internal:reverseReach
+Domain Controller:attemptReverseReach
+Domain Controller:successfulReverseReach
+Domain Controller:reverseReach
+LSASS:attemptReverseReach
+LSASS:reverseReach
+LSASS:extract
+Adalwofa NTLM Hash:extract
+Adalwofa NTLM Hash:attemptUse
+Adalwofa NTLM Hash:use
+Adalwofa Credentials:guessCredentialsFromHash
+Adalwofa Credentials:guessCredentials
+Adalwofa Credentials:attemptUse
+Adalwofa Credentials:use
+Adalwofa:attemptAssume
+Adalwofa:successfulAssume
+Adalwofa:assume
+Workstation 2:networkConnectUninspected
+Workstation 2:specificAccessAuthenticate
+Workstation 2:specificAccessNetworkConnect
+Workstation 2:specificAccessFromNetworkConnection
+Workstation 2:specificAccess
+Workstation 2:attemptUseVulnerability
+Workstation 2:successfulUseVulnerability
+Workstation 2:useVulnerability
+Key Logging:attemptAbuse
+Key Logging:lowPrivilegesAchieved
+Key Logging:inherentUserInteraction
+Key Logging:userInteractionAchieved
+Key Logging:abuse
+Key Logging:attemptExploit
+Key Logging:exploitTrivially
+Key Logging:exploit
+Key Logging:impact
+Key Logging:read
+Workstation 2:read
+Terminal:attemptRead
+Terminal:successfulRead
+Terminal:read
+SSH Creds:read
+Workstation 2:attemptReverseReach
+Workstation 2:successfulReverseReach
+Workstation 2:reverseReach
+Terminal:attemptReverseReach
+Terminal:reverseReach
+Terminal:extract
+SSH Creds:extract
+SSH Creds:attemptUse
+SSH Creds:use
+Adalwofa Linux:attemptAssume
+Adalwofa Linux:successfulAssume
+Adalwofa Linux:assume
+Apache Server:authenticate
+Apache Server:networkConnectUninspected
+Apache Server:networkConnect
+Apache Server:networkAccess
+Apache Server:fullAccess
+Apache Server:attemptRead
+Apache Server:successfulRead
+Apache Server:read
+Apache Server:attemptReverseReach
+Apache Server:successfulReverseReach
+Apache Server:reverseReach
+Web App:attemptRead
+Web App:successfulRead
+Web App:read
+Web App:attemptReverseReach
+Web App:successfulReverseReach
+Web App:reverseReach
+Client Data:attemptRead
+Client Data:successfulRead
+Client Data:read
+Client Data:attemptReverseReach
+Client Data:reverseReach
+Client Data:extract

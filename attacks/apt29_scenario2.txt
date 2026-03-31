@@ -1,0 +1,101 @@
+Legitimate User:successfulSocialEngineering
+Legitimate User:socialEngineering
+Legitimate User:unsafeUserActivity
+Local User 2:attemptUnsafeUserActivity
+Local User 2:successfulUnsafeUserActivity
+Local User 2:unsafeUserActivity
+Win10 1903 Workstation 2:attemptUnsafeUserActivity
+LAN:attemptReverseReach
+LAN:reverseReach
+CR:attemptReverseReach
+CR:reverseReach
+Win10 1903 Workstation 2:attemptReverseReach
+Win10 1903 Workstation 2:successfulReverseReach
+Win10 1903 Workstation 2:reverseReach
+Win10 1903 Workstation 2:attackerUnsafeUserActivityCapabilityWithReverseReach
+Win10 1903 Workstation 2:attackerUnsafeUserActivityCapability
+Win10 1903 Workstation 2:successfulUnsafeUserActivity
+Win10 1903 Workstation 2:unsafeUserActivity
+# --- T1204 END ---
+Win10 1903 Workstation 2:networkConnectUninspected
+Win10 1903 Workstation 2:networkConnect
+# --- T1204? ---
+Local User 2:attemptAssume
+Local User 2:successfulAssume
+Local User 2:assume
+Win10 1903 Workstation 2:specificAccessNetworkConnect
+Win10 1903 Workstation 2:specificAccessAuthenticate
+Win10 1903 Workstation 2:specificAccessFromNetworkConnection
+Win10 1903 Workstation 2:specificAccess
+Win10 1903 Workstation 2:accessNetworkAndConnections
+CR:attemptAccessNetworksUninspected
+CR:successfulAccessNetworksUninspected
+CR:accessNetworksUninspected
+# --- UAC Bypass START ---
+Win10 1903 Workstation 2:attemptUseVulnerability
+Win10 1903 Workstation 2:successfulUseVulnerability
+Win10 1903 Workstation 2:useVulnerability
+UAC Bypass:networkAccessAchieved
+UAC Bypass:lowPrivilegesAchieved
+UAC Bypass:attemptAbuse
+UAC Bypass:abuse
+UAC Bypass:attemptExploit
+UAC Bypass:exploitTrivially
+UAC Bypass:exploit
+UAC Bypass:impact
+UAC Bypass:read
+# --- UAC Bypass END ---
+# --- T1003 START ---
+Win10 1903 Workstation 2:read
+LSASS Memory:attemptRead
+LSASS Memory:successfulRead
+LSASS Memory:read
+LSASS Memory:attemptReverseReach
+LSASS Memory:reverseReach
+LSASS Memory:extract
+Admin Creds:read
+Admin Creds:extract
+Admin Creds:attemptUse
+Admin Creds:use
+DC Admin:attemptAssume
+DC Admin:successfulAssume
+DC Admin:assume
+Local:attemptConnectToApplicationsUninspected
+Local:connectToApplicationsUninspected
+Windows Server:networkConnectUninspected
+Windows Server:authenticate
+Windows Server:networkConnect
+Windows Server:networkAccess
+Windows Server:fullAccess
+Windows Server:attemptReverseReach
+Windows Server:successfulReverseReach
+Windows Server:reverseReach
+Windows Server:attemptRead
+Windows Server:successfulRead
+Windows Server:read
+Server LSASS Memory:attemptRead
+Server LSASS Memory:successfulRead
+Server LSASS Memory:read
+Server LSASS Memory:attemptReverseReach
+Server LSASS Memory:reverseReach
+Server LSASS Memory:extract
+KRBTGT NTLM Hash:read
+KRBTGT NTLM Hash:extract
+KRBTGT NTLM Hash:attemptUse
+KRBTGT NTLM Hash:use
+# --- Include guessCredentialsFromHash? ---
+Win10 1903 Workstation 2:specificAccessRead
+Outlook:attemptRead
+Outlook:successfulRead
+Outlook:read
+Outlook:attemptReverseReach
+Outlook:successfulReverseReach
+Outlook:reverseReach
+emails:attemptRead
+emails:successfulRead
+emails:read
+emails:attemptReverseReach
+emails:reverseReach
+emails:extract
+
+

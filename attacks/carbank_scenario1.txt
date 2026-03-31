@@ -1,0 +1,103 @@
+Admin User:successfulSocialEngineering
+Admin User:socialEngineering
+Admin User:unsafeUserActivity
+User Account:attemptUnsafeUserActivity
+User Account:successfulUnsafeUserActivity
+User Account:unsafeUserActivity
+HR Manager Workstation:attemptUnsafeUserActivity
+LAN:attemptReverseReach
+LAN:reverseReach
+Outbound:attemptReverseReach
+Outbound:reverseReach
+HR Manager Workstation:attemptReverseReach
+HR Manager Workstation:successfulReverseReach
+HR Manager Workstation:reverseReach
+HR Manager Workstation:attackerUnsafeUserActivityCapabilityWithReverseReach
+HR Manager Workstation:attackerUnsafeUserActivityCapability
+HR Manager Workstation:successfulUnsafeUserActivity
+HR Manager Workstation:unsafeUserActivity
+HR Manager Workstation:networkConnectUninspected
+HR Manager Workstation:networkConnect
+HR Manager Workstation:specificAccessNetworkConnect
+User Account:attemptAssume
+User Account:successfulAssume
+User Account:assume
+HR Manager Workstation:specificAccessAuthenticate
+HR Manager Workstation:specificAccessFromNetworkConnection
+HR Manager Workstation:specificAccess
+HR Manager Workstation:attemptUseVulnerability
+HR Manager Workstation:successfulUseVulnerability
+HR Manager Workstation:useVulnerability
+UAC Bypass:lowPrivilegesAchieved
+UAC Bypass:attemptAbuse
+UAC Bypass:abuse
+UAC Bypass:attemptExploit
+UAC Bypass:exploitTrivially
+UAC Bypass:exploit
+UAC Bypass:impact
+UAC Bypass:read
+HR Manager Workstation:read
+Registry:attemptRead
+Registry:successfulRead
+Registry:read
+Registry:attemptReverseReach
+Registry:reverseReach
+NTLM Hash:read
+NTLM Hash:attemptUse
+NTLM Hash:use
+# Pass-the-hash is used in reality to get Domain Credentials
+Domain Credentials:guessCredentialsFromHash
+Domain Credentials:guessCredentials
+Domain Credentials:attemptUse
+Domain Credentials:use
+Domain Admin:attemptAssume
+Domain Admin:successfulAssume
+Domain Admin:assume
+HR Manager Workstation:accessNetworkAndConnections
+Local:attemptAccessNetworksUninspected
+Local:successfulAccessNetworksUninspected
+Local:accessNetworksUninspected
+Local:attemptConnectToApplicationsUninspected
+Local:connectToApplicationsUninspected
+Bank File Server:networkConnectUninspected
+Bank File Server:networkConnect
+Cent User:attemptAssume
+Cent User:successfulAssume
+Cent User:assume
+Bank File Server:specificAccessAuthenticate
+Bank File Server:specificAccessNetworkConnect
+Bank File Server:specificAccessFromNetworkConnection
+Bank File Server:specificAccess
+# Pass-the-hash is used in reality to get Domain Credentials
+Domain Controller:networkConnectUninspected
+Domain Controller:networkConnect
+Domain Controller:authenticate
+Domain Controller:networkAccess
+Domain Controller:fullAccess
+CFO Workstation:networkConnectUninspected
+CFO Workstation:networkConnect
+CFO Workstation:authenticate
+CFO Workstation:networkAccess
+CFO Workstation:fullAccess
+CFO Workstation:attemptReverseReach
+CFO Workstation:successfulReverseReach
+CFO Workstation:reverseReach
+CFO Workstation:specificAccess
+CFO Workstation:specificAccessRead
+Browser:localConnect
+Browser:attemptReverseReach
+Browser:successfulReverseReach
+Browser:reverseReach
+CFO User:attemptAssume
+CFO User:successfulAssume
+CFO User:assume
+Browser Credential Store:authorizedReadFromIAM
+Browser Credential Store:authorizedReadFromApplication
+Browser Credential Store:authorizedRead
+Browser Credential Store:attemptRead
+Browser Credential Store:successfulRead
+Browser Credential Store:read
+Browser Credential Store:attemptReverseReach
+Browser Credential Store:reverseReach
+Browser Credentials:read
+Browser Credential Store:extract

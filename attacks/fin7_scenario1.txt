@@ -1,0 +1,110 @@
+Legitimate User:successfulSocialEngineering
+Legitimate User:socialEngineering
+Legitimate User:unsafeUserActivity
+Hotel Manager:attemptAssume
+Hotel Manager:successfulAssume
+Hotel Manager:assume
+WAN:attemptReverseReach
+WAN:reverseReach
+WAN:networkForwardingUninspected
+Outbound:attemptReverseReach
+Outbound:reverseReach
+Hotel Manager Workstation:attemptReverseReach
+Hotel Manager Workstation:successfulReverseReach
+Hotel Manager Workstation:reverseReach
+Hotel Manager:attemptUnsafeUserActivity
+Hotel Manager:successfulUnsafeUserActivity
+Hotel Manager:unsafeUserActivity
+Hotel Manager Workstation:attemptUnsafeUserActivity
+Hotel Manager Workstation:attackerUnsafeUserActivityCapabilityWithReverseReach
+Hotel Manager Workstation:attackerUnsafeUserActivityCapability
+Hotel Manager Workstation:successfulUnsafeUserActivity
+Hotel Manager Workstation:unsafeUserActivity
+Hotel Manager Workstation:networkConnectUninspected
+Hotel Manager Workstation:networkConnect
+Hotel Manager Workstation:specificAccessNetworkConnect
+Hotel Manager Workstation:specificAccessAuthenticate
+Hotel Manager Workstation:specificAccessFromNetworkConnection
+Hotel Manager Workstation:specificAccess
+Hotel Manager Workstation:attemptUseVulnerability
+Hotel Manager Workstation:successfulUseVulnerability
+Hotel Manager Workstation:useVulnerability
+UAC Bypass:attemptAbuse
+UAC Bypass:abuse
+UAC Bypass:attemptExploit
+UAC Bypass:exploitTrivially
+UAC Bypass:exploit
+UAC Bypass:impact
+UAC Bypass:modify
+Hotel Manager Workstation:modify
+Hotel Manager Workstation:fullAccess
+Hotel Manager Workstation:attemptRead
+Hotel Manager Workstation:successfulRead
+Hotel Manager Workstation:read
+Registry:attemptRead
+Registry:successfulRead
+Registry:read
+Registry:attemptReverseReach
+Registry:reverseReach
+Registry:extract
+Hashed Domain Admin Credentials:read
+Hashed Domain Admin Credentials:attemptUse
+Hashed Domain Admin Credentials:use
+Hashed Domain Admin Credentials:extract
+Domain Admin Credentials:guessCredentialsFromHash
+Domain Admin Credentials:guessCredentials
+Domain Admin Credentials:attemptUse
+Domain Admin Credentials:use
+Domain Admin:attemptAssume
+Domain Admin:successfulAssume
+Domain Admin:assume
+# --- Lateral Movement IT Admin ---
+IT Admin Workstation:authenticate
+Hotel Manager Workstation:accessNetworkAndConnections
+Internal:attemptConnectToApplicationsUninspected
+Internal:connectToApplicationsUninspected
+IT Admin Workstation:networkConnectUninspected
+IT Admin Workstation:networkConnect
+IT Admin Workstation:networkAccess
+IT Admin Workstation:fullAccess
+IT Admin Workstation:attemptRead
+IT Admin Workstation:successfulRead
+IT Admin Workstation:read
+IT Admin Workstation:attemptReverseReach
+IT Admin Workstation:successfulReverseReach
+IT Admin Workstation:reverseReach
+User Activity Data:attemptRead
+User Activity Data:successfulRead
+User Activity Data:read
+User Activity Data:attemptReverseReach
+User Activity Data:reverseReach
+User Activity Data:extract
+# --- low privilege lateral movement kmitnick to Accounting Workstation ---
+Hashed kmitnick Credentials:read
+Hashed kmitnick Credentials:extract
+Hashed kmitnick Credentials:attemptUse
+Hashed kmitnick Credentials:use
+kmitnick Credentials:guessCredentialsFromHash
+kmitnick Credentials:guessCredentials
+kmitnick Credentials:attemptUse
+kmitnick Credentials:use
+kmitnick:attemptAssume
+kmitnick:successfulAssume
+kmitnick:assume
+Accounting Workstation:authenticate
+Accounting Workstation:networkConnectUninspected
+Accounting Workstation:networkConnect
+Accounting Workstation:networkAccess
+Accounting Workstation:fullAccess
+Accounting Workstation:attemptRead
+Accounting Workstation:successfulRead
+Accounting Workstation:read
+Accounting Workstation:attemptReverseReach
+Accounting Workstation:successfulReverseReach
+Accounting Workstation:reverseReach
+Credit Card Data:attemptRead
+Credit Card Data:successfulRead
+Credit Card Data:read
+Credit Card Data:attemptReverseReach
+Credit Card Data:reverseReach
+Credit Card Data:extract

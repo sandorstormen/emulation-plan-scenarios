@@ -1,0 +1,54 @@
+MSP:attemptReverseReach
+MSP:reverseReach
+Local:attemptConnectToApplicationsUninspected
+Local:connectToApplicationsUninspected
+Local:attemptReverseReach
+Local:reverseReach
+Windows Workstation 2:networkConnectUninspected
+Windows Workstation 2:authenticate
+Windows Workstation 2:networkConnect
+Windows Workstation 2:networkAccess
+Windows Workstation 2:fullAccess
+Windows Workstation 2:attemptRead
+Windows Workstation 2:successfulRead
+Windows Workstation 2:read
+Windows Workstation 2:attemptReverseReach
+Windows Workstation 2:successfulReverseReach
+Windows Workstation 2:reverseReach
+# --- Step 4.A ---
+LSASS Memory:attemptRead
+LSASS Memory:successfulRead
+LSASS Memory:read
+LSASS Memory:attemptReverseReach
+LSASS Memory:reverseReach
+LSASS Memory:extract
+Workstation 2 User Creds:read
+Workstation 2 User Creds:extract
+# --- Step 4.B ---
+Domain Controller:networkConnectUninspected
+Domain Controller:authenticate
+Domain Controller:networkConnect
+Domain Controller:networkAccess
+Domain Controller:fullAccess
+Domain Controller:attemptReverseReach
+Domain Controller:successfulReverseReach
+Domain Controller:reverseReach
+Domain Controller:attemptRead
+Domain Controller:successfulRead
+Domain Controller:read
+NTDS.dit:attemptRead
+NTDS.dit:successfulRead
+NTDS.dit:read
+NTDS.dit:attemptReverseReach
+NTDS.dit:reverseReach
+NTDS.dit:extract
+Hashed Domain Admin Creds:read
+Hashed Domain Admin Creds:extract
+Hashed Server 1 User Creds:30:read
+Hashed Server 1 User Creds:30:extract
+Hashed Server 2 User Creds:31:read
+Hashed Server 2 User Creds:31:extract
+Hashed Workstation 1 User Creds:32:read
+Hashed Workstation 1 User Creds:32:extract
+Hashed Workstation 2 User Creds:read
+Hashed Workstation 2 User Creds:extract

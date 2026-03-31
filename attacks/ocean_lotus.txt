@@ -1,0 +1,66 @@
+Hope Potter:successfulSocialEngineering
+Hope Potter:socialEngineering
+Hope Potter:unsafeUserActivity
+WAN:attemptReverseReach
+WAN:reverseReach
+Outbound:attemptConnectToApplicationsUninspected
+Outbound:connectToApplicationsUninspected
+Outbound:attemptReverseReach
+Outbound:reverseReach
+hpotter Mac:attemptAssume
+hpotter Mac:successfulAssume
+hpotter Mac:assume
+MacOS Workstation:specificAccessAuthenticate
+hpotter Mac:attemptUnsafeUserActivity
+hpotter Mac:successfulUnsafeUserActivity
+hpotter Mac:unsafeUserActivity
+MacOS Workstation:attemptUnsafeUserActivity
+MacOS Workstation:attemptReverseReach
+MacOS Workstation:successfulReverseReach
+MacOS Workstation:reverseReach
+MacOS Workstation:attackerUnsafeUserActivityCapabilityWithReverseReach
+MacOS Workstation:attackerUnsafeUserActivityCapability
+MacOS Workstation:successfulUnsafeUserActivity
+MacOS Workstation:unsafeUserActivity
+MacOS Workstation:networkConnectUninspected
+MacOS Workstation:specificAccessNetworkConnect
+MacOS Workstation:specificAccessFromNetworkConnection
+MacOS Workstation:specificAccess
+MacOS Workstation:specificAccessRead
+.ssh:authorizedReadFromIAM
+.ssh:authorizedReadFromApplication
+.ssh:authorizedRead
+.ssh:attemptRead
+.ssh:successfulRead
+.ssh:read
+id_rsa:read
+.ssh:attemptReverseReach
+.ssh:reverseReach
+.ssh:extract
+id_rsa:extract
+id_rsa:attemptUse
+id_rsa:use
+hpotter Linux:attemptAssume
+hpotter Linux:successfulAssume
+hpotter Linux:assume
+MacOS Workstation:accessNetworkAndConnections
+Local:attemptConnectToApplicationsUninspected
+Local:connectToApplicationsUninspected
+Linux Server:networkConnectUninspected
+Linux Server:specificAccessNetworkConnect
+Linux Server:specificAccessAuthenticate
+Linux Server:specificAccessFromNetworkConnection
+Linux Server:specificAccess
+Linux Server:specificAccessRead
+Linux Server:attemptReverseReach
+Linux Server:successfulReverseReach
+Linux Server:reverseReach
+PDF Files:authorizedReadFromIAM
+PDF Files:authorizedReadFromApplication
+PDF Files:authorizedRead
+PDF Files:attemptRead
+PDF Files:successfulRead
+PDF Files:read
+PDF Files:attemptReverseReach
+PDF Files:reverseReach
+PDF Files:extract

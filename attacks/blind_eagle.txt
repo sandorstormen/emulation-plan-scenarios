@@ -1,0 +1,50 @@
+User:successfulSocialEngineering
+User:socialEngineering
+User:unsafeUserActivity
+User Account:attemptUnsafeUserActivity
+User Account:successfulUnsafeUserActivity
+User Account:unsafeUserActivity
+Windows 10 OS:attemptUnsafeUserActivity
+LAN:attemptReverseReach
+LAN:reverseReach
+CR:attemptReverseReach
+CR:reverseReach
+# --- T1204 START ---
+CR:attemptConnectToApplicationsUninspected
+CR:connectToApplicationsUninspected
+# --- T1204 END ---
+Windows 10 OS:attemptReverseReach
+Windows 10 OS:successfulReverseReach
+Windows 10 OS:reverseReach
+Windows 10 OS:attackerUnsafeUserActivityCapabilityWithReverseReach
+Windows 10 OS:attackerUnsafeUserActivityCapability
+Windows 10 OS:successfulUnsafeUserActivity
+Windows 10 OS:unsafeUserActivity
+User Account:attemptAssume
+User Account:successfulAssume
+User Account:assume
+Windows 10 OS:networkConnectUninspected
+Windows 10 OS:specificAccessNetworkConnect
+Windows 10 OS:networkConnect
+Windows 10 OS:specificAccessAuthenticate
+Windows 10 OS:specificAccessFromNetworkConnection
+Windows 10 OS:specificAccess
+Edge Browser:attemptReverseReach
+Edge Browser:successfulReverseReach
+Edge Browser:reverseReach
+Edge Browser:localConnect
+Edge Browser:specificAccessAuthenticate
+Edge Browser:specificAccessFromLocalConnection
+Edge Browser:specificAccess
+Edge Browser:specificAccessRead
+Browser Credential Store:attemptReverseReach
+Browser Credential Store:reverseReach
+Browser Credential Store:authorizedReadFromIAM
+Browser Credential Store:authorizedReadFromApplication
+Browser Credential Store:authorizedRead
+Browser Credential Store:attemptRead
+Browser Credential Store:successfulRead
+Browser Credential Store:read
+Browser Credential Store:extract
+Bank Credentials:read
+Bank Credentials:extract

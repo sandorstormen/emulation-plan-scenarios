@@ -1,0 +1,87 @@
+Legitimate User:unsafeUserActivity
+Local gosta:attemptUnsafeUserActivity
+Local gosta:successfulUnsafeUserActivity
+Local gosta:unsafeUserActivity
+Exchange Admin Workstation:attemptUnsafeUserActivity
+WAN:attemptReverseReach
+WAN:reverseReach
+External:attemptReverseReach
+External:reverseReach
+Exchange Admin Workstation:attemptReverseReach
+Exchange Admin Workstation:successfulReverseReach
+Exchange Admin Workstation:reverseReach
+Exchange Admin Workstation:attackerUnsafeUserActivityCapabilityWithReverseReach
+Exchange Admin Workstation:attackerUnsafeUserActivityCapability
+Exchange Admin Workstation:successfulUnsafeUserActivity
+Exchange Admin Workstation:unsafeUserActivity
+Exchange Admin Workstation:networkConnectUninspected
+Local gosta:attemptAssume
+Local gosta:successfulAssume
+Local gosta:assume
+Exchange Admin Workstation:specificAccessAuthenticate
+Exchange Admin Workstation:specificAccessNetworkConnect
+Exchange Admin Workstation:specificAccessFromNetworkConnection
+Exchange Admin Workstation:specificAccess
+Exchange Admin Workstation:specificAccessRead
+Windows Credential Vault:authorizedReadFromIAM
+Windows Credential Vault:authorizedReadFromApplication
+Windows Credential Vault:authorizedRead
+Windows Credential Vault:attemptRead
+Windows Credential Vault:successfulRead
+Windows Credential Vault:read
+Windows Credential Vault:attemptReverseReach
+Windows Credential Vault:reverseReach
+Windows Credential Vault:extract
+gosta Credentials:read
+gosta Credentials:extract
+gosta Credentials:attemptUse
+gosta Credentials:use
+gosta:attemptAssume
+gosta:successfulAssume
+gosta:assume
+Exchange Admin Workstation:accessNetworkAndConnections
+Local:attemptConnectToApplicationsUninspected
+Local:connectToApplicationsUninspected
+Exchange Server:networkConnectUninspected
+Exchange Server:networkConnect
+Exchange Server:authenticate
+Exchange Server:networkAccess
+Exchange Server:fullAccess
+Exchange Server:attemptRead
+Exchange Server:successfulRead
+Exchange Server:read
+Exchange Server:attemptReverseReach
+Exchange Server:successfulReverseReach
+Exchange Server:reverseReach
+LSASS:attemptRead
+LSASS:successfulRead
+LSASS:read
+LSASS:attemptReverseReach
+LSASS:reverseReach
+LSASS:extract
+tous Credentials:read
+tous Credentials:extract
+tous Credentials:attemptUse
+tous Credentials:use
+tous:attemptAssume
+tous:successfulAssume
+tous:assume
+SQL Server:networkConnectUninspected
+SQL Server:networkConnect
+SQL Server:authenticate
+SQL Server:networkAccess
+SQL Server:fullAccess
+SQL Server:attemptRead
+SQL Server:successfulRead
+SQL Server:read
+Local:attemptReverseReach
+Local:reverseReach
+SQL Server:attemptReverseReach
+SQL Server:successfulReverseReach
+SQL Server:reverseReach
+DB Backup:attemptRead
+DB Backup:successfulRead
+DB Backup:read
+DB Backup:attemptReverseReach
+DB Backup:reverseReach
+DB Backup:extract

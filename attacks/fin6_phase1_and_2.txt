@@ -1,0 +1,132 @@
+WAN:attemptReverseReach
+WAN:reverseReach
+Outbound:attemptConnectToApplicationsUninspected
+Outbound:connectToApplicationsUninspected
+Outbound:attemptReverseReach
+Outbound:reverseReach
+Windows Workstation 1:specificAccessAuthenticate
+Windows Workstation 1:attemptReverseReach
+Windows Workstation 1:successfulReverseReach
+Windows Workstation 1:reverseReach
+Named-pipe Impersonation:lowPrivilegesAchieved
+Windows Workstation 1:networkConnect
+Named-pipe Impersonation:networkAccessAchieved
+Windows Workstation 1:attemptUseVulnerability
+Windows Workstation 1:successfulUseVulnerability
+Windows Workstation 1:useVulnerability
+Named-pipe Impersonation:attemptAbuse
+Named-pipe Impersonation:abuse
+Named-pipe Impersonation:attemptExploit
+Named-pipe Impersonation:exploitTrivially
+Named-pipe Impersonation:exploit
+Named-pipe Impersonation:impact
+Named-pipe Impersonation:read
+Windows Workstation 1:read
+LSASS:attemptRead
+LSASS:successfulRead
+LSASS:read
+LSASS:attemptReverseReach
+LSASS:reverseReach
+LSASS:extract
+Workstation 1 Admin Credentials:read
+Workstation 1 Admin Credentials:extract
+Workstation 1 Admin Credentials:attemptUse
+Workstation 1 Admin Credentials:use
+Workstation 1 Admin:attemptAssume
+Workstation 1 Admin:successfulAssume
+Workstation 1 Admin:assume
+Windows Workstation 1:authenticate
+Windows Workstation 1:networkAccess
+Windows Workstation 1:fullAccess
+NTDS:attemptRead
+NTDS:successfulRead
+NTDS:read
+NTDS:attemptReverseReach
+NTDS:reverseReach
+NTDS:extract
+# --- Interpretation that FIN6 gets Domain Admin ---
+Hashed Domain Admin Credentials:read
+Hashed Domain Admin Credentials:attemptUse
+Hashed Domain Admin Credentials:use
+Domain Admin Credentials:guessCredentialsFromHash
+Domain Admin Credentials:guessCredentials
+Domain Admin Credentials:attemptUse
+Domain Admin Credentials:use
+Domain Admin:attemptAssume
+Domain Admin:successfulAssume
+Domain Admin:assume
+# --- Scenario 1 ---
+POS System:authenticate
+Windows Workstation 1:accessNetworkAndConnections
+Local:attemptConnectToApplicationsUninspected
+Local:connectToApplicationsUninspected
+Local:attemptReverseReach
+Local:reverseReach
+POS System:networkConnectUninspected
+POS System:networkConnect
+POS System:networkAccess
+POS System:fullAccess
+POS System:attemptReverseReach
+POS System:successfulReverseReach
+POS System:reverseReach
+POS System:attemptRead
+POS System:successfulRead
+POS System:read
+Track Data:attemptRead
+Track Data:successfulRead
+Track Data:read
+Track Data:attemptReverseReach
+Track Data:reverseReach
+Track Data:extract
+# --- Scenario 2 ---
+Web Server:authenticate
+Web Server:networkConnectUninspected
+Web Server:networkConnect
+Web Server:attemptReverseReach
+Web Server:successfulReverseReach
+Web Server:reverseReach
+Web Server:networkAccess
+Web Server:fullAccess
+Web Server:attemptRead
+Web Server:successfulRead
+Web Server:read
+Purchase Request:attemptRead
+Purchase Request:successfulRead
+Purchase Request:read
+Purchase Request:attemptReverseReach
+Purchase Request:reverseReach
+Purchase Request:extract
+# --- Scenario 3 ---
+SMB Server:authenticate
+SMB Server:networkConnectUninspected
+SMB Server:networkConnect
+SMB Server:networkAccess
+SMB Server:fullAccess
+SMB Server:attemptDeny
+SMB Server:successfulDeny
+SMB Server:deny
+Domain Controller:authenticate
+Domain Controller:networkConnectUninspected
+Domain Controller:networkConnect
+Domain Controller:networkAccess
+Domain Controller:fullAccess
+Domain Controller:attemptDeny
+Domain Controller:successfulDeny
+Domain Controller:deny
+Web Server:attemptDeny
+Web Server:successfulDeny
+Web Server:deny
+POS System:attemptDeny
+POS System:successfulDeny
+POS System:deny
+Windows Workstation 1:attemptDeny
+Windows Workstation 1:successfulDeny
+Windows Workstation 1:deny
+Windows Workstation 2:networkConnectUninspected
+Windows Workstation 2:authenticate
+Windows Workstation 2:networkConnect
+Windows Workstation 2:networkAccess
+Windows Workstation 2:fullAccess
+Windows Workstation 2:attemptDeny
+Windows Workstation 2:successfulDeny
+Windows Workstation 2:deny

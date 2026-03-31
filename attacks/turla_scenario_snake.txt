@@ -1,0 +1,107 @@
+Egle Human:successfulSocialEngineering
+Egle Human:socialEngineering
+Egle Human:unsafeUserActivity
+Egle:attemptUnsafeUserActivity
+Egle:successfulUnsafeUserActivity
+Egle:unsafeUserActivity
+Workstation:attemptUnsafeUserActivity
+WAN:attemptReverseReach
+WAN:reverseReach
+Outbound:attemptReverseReach
+Outbound:reverseReach
+Workstation:attemptReverseReach
+Workstation:successfulReverseReach
+Workstation:reverseReach
+Workstation:attackerUnsafeUserActivityCapabilityWithReverseReach
+Workstation:attackerUnsafeUserActivityCapability
+Workstation:successfulUnsafeUserActivity
+Workstation:unsafeUserActivity
+Workstation:networkConnectUninspected
+Workstation:specificAccessNetworkConnect
+Egle:attemptAssume
+Egle:successfulAssume
+Egle:assume
+Workstation:specificAccessAuthenticate
+Workstation:specificAccessFromNetworkConnection
+Workstation:specificAccess
+Workstation:attemptUseVulnerability
+Workstation:successfulUseVulnerability
+Workstation:useVulnerability
+Driver Unsafe IOCTLs:attemptAbuse
+Driver Unsafe IOCTLs:abuse
+Driver Unsafe IOCTLs:attemptExploit
+Driver Unsafe IOCTLs:exploitTrivially
+Driver Unsafe IOCTLs:exploit
+Driver Unsafe IOCTLs:impact
+Driver Unsafe IOCTLs:modify
+Workstation:modify
+Workstation:fullAccess
+Egle Admin:attemptAssume
+Egle Admin:successfulAssume
+Egle Admin:assume
+File Server:authenticate
+Workstation:accessNetworkAndConnections
+Internal:attemptConnectToApplicationsUninspected
+Internal:connectToApplicationsUninspected
+File Server:networkConnectUninspected
+File Server:networkConnect
+File Server:networkAccess
+File Server:fullAccess
+File Server:attemptRead
+File Server:successfulRead
+File Server:read
+File Server:attemptReverseReach
+File Server:successfulReverseReach
+File Server:reverseReach
+LSASS:attemptRead
+LSASS:successfulRead
+LSASS:read
+LSASS:attemptReverseReach
+LSASS:reverseReach
+LSASS:extract
+Zilvinas Credentials:read
+Zilvinas Credentials:extract
+Zilvinas Credentials:attemptUse
+Zilvinas Credentials:use
+Zilvinas:attemptAssume
+Zilvinas:successfulAssume
+Zilvinas:assume
+Admin Workstation:networkConnectUninspected
+Admin Workstation:specificAccessAuthenticate
+Admin Workstation:specificAccessNetworkConnect
+Admin Workstation:specificAccessFromNetworkConnection
+Admin Workstation:specificAccess
+# -- Pretend that the attacker creates a new user account and adds it as domain admin ---
+# This is dynamics which needs DynaMAL and therefore we continue to use Zilvinas privileges to pretend that the user was created
+Admin Workstation:specificAccessModify
+Exchange Server:authenticate
+Exchange Server:networkConnectUninspected
+Exchange Server:networkConnect
+Exchange Server:networkAccess
+Exchange Server:fullAccess
+Exchange Server:attemptRead
+Exchange Server:successfulRead
+Exchange Server:read
+Internal:attemptReverseReach
+Internal:reverseReach
+Exchange Server:attemptReverseReach
+Exchange Server:successfulReverseReach
+Exchange Server:reverseReach
+SMTP Server:attemptRead
+SMTP Server:successfulRead
+SMTP Server:read
+SMTP Server:attemptReverseReach
+SMTP Server:successfulReverseReach
+SMTP Server:reverseReach
+E-Mails:attemptRead
+E-Mails:successfulRead
+E-Mails:read
+E-Mails:attemptReverseReach
+E-Mails:reverseReach
+E-Mails:extract
+E-Mail Store:attemptRead
+E-Mail Store:successfulRead
+E-Mail Store:read
+E-Mail Store:attemptReverseReach
+E-Mail Store:reverseReach
+E-Mail Store:extract

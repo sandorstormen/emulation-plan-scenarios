@@ -5,3 +5,7 @@ These are scenarios made for the [`mal-simulator`](https://github.com/mal-lang/m
 # Modelling Modus
 
 The scenarios were modeled to be representative of the attacks describe in the emulation plans. Therefore, only system components mentioned in the emulation plan was included in the instance models of the sencarios. Any part of the attack that is an aspect not represented in [coreLang](https://www.sciencedirect.com/science/article/pii/S0167404824003626) was not included in the scenarios.
+
+# Attacks
+
+The attacks are `txt`-files wich lists attack steps. These sequences of attack steps are supposed to represent the actions taken by different *APTs* to perform the attack.
