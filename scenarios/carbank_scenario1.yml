@@ -1,0 +1,275 @@
+lang_file: ../org.mal-lang.minCoreLang-1.0.0.mar
+agents:
+  Carbank:
+    type: attacker
+    goals:
+    - Browser Credential Store:extract
+    entry_points:
+    - LAN:accessUninspected
+    - Admin User:attemptSocialEngineering
+model:
+  metadata:
+    name: carbank_scenario1
+    langVersion: 1.0.0
+    langID: org.mal-lang.coreLang
+    malVersion: 0.1.0-SNAPSHOT
+    MAL-Toolbox Version: 1.1.3
+    info: Created by the mal-toolbox model python module.
+  assets:
+    0:
+      name: LAN
+      type: Network
+      associated_assets:
+        netConnections:
+          1: Outbound
+      extras:
+        position:
+          x: -664.5
+          y: -1149.0
+    1:
+      name: Outbound
+      type: ConnectionRule
+      associated_assets:
+        networks:
+          0: LAN
+        outApplications:
+          5: CFO Workstation
+          4: Bank File Server
+          3: HR Manager Workstation
+          2: Domain Controller
+      extras:
+        position:
+          x: -645.0
+          y: -1018.5
+    2:
+      name: Domain Controller
+      type: Application
+      associated_assets:
+        outgoingAppConnections:
+          1: Outbound
+        highPrivAppIAMs:
+          8: Domain Admin
+        appConnections:
+          17: Local
+      extras:
+        position:
+          x: -1582.5
+          y: -793.5
+    3:
+      name: HR Manager Workstation
+      type: Application
+      associated_assets:
+        outgoingAppConnections:
+          1: Outbound
+        highPrivAppIAMs:
+          8: Domain Admin
+        vulnerabilities:
+          7: UAC Bypass
+        containedData:
+          9: Registry
+        lowPrivAppIAMs:
+          12: User Account
+        appConnections:
+          17: Local
+      extras:
+        position:
+          x: 222.0
+          y: -552.0
+    4:
+      name: Bank File Server
+      type: Application
+      associated_assets:
+        outgoingAppConnections:
+          1: Outbound
+        lowPrivAppIAMs:
+          13: Cent User
+        appConnections:
+          17: Local
+      extras:
+        position:
+          x: -1800.0
+          y: -1053.0
+    5:
+      name: CFO Workstation
+      type: Application
+      associated_assets:
+        outgoingAppConnections:
+          1: Outbound
+        highPrivAppIAMs:
+          8: Domain Admin
+        appConnections:
+          17: Local
+        lowPrivAppIAMs:
+          18: CFO User
+        appExecutedApps:
+          19: Browser
+        executionPrivIAMs:
+          18: CFO User
+        containedData:
+          20: Browser Credential Store
+      extras:
+        position:
+          x: -1071.0
+          y: -568.5
+    6:
+      name: Admin User
+      type: User
+      associated_assets:
+        userIds:
+          12: User Account
+      extras:
+        position:
+          x: 529.5
+          y: -577.5
+    7:
+      name: UAC Bypass
+      type: SoftwareVulnerability
+      associated_assets:
+        application:
+          3: HR Manager Workstation
+      extras:
+        position:
+          x: 75.0
+          y: -876.0
+    8:
+      name: Domain Admin
+      type: Identity
+      associated_assets:
+        highPrivApps:
+          3: HR Manager Workstation
+          5: CFO Workstation
+          2: Domain Controller
+        credentials:
+          11: Domain Credentials
+      extras:
+        position:
+          x: -1548.0
+          y: -24.0
+    9:
+      name: Registry
+      type: Data
+      associated_assets:
+        containingApp:
+          3: HR Manager Workstation
+        information:
+          10: NTLM Hash
+      extras:
+        position:
+          x: 13.5
+          y: 9.0
+    10:
+      name: NTLM Hash
+      type: Credentials
+      associated_assets:
+        containerData:
+          9: Registry
+        origCreds:
+          11: Domain Credentials
+      extras:
+        position:
+          x: -436.5
+          y: 15.0
+    11:
+      name: Domain Credentials
+      type: Credentials
+      defenses:
+        notGuessable: 0.0
+        notDisclosed: 1.0
+      associated_assets:
+        identities:
+          13: Cent User
+          8: Domain Admin
+        hashes:
+          10: NTLM Hash
+      extras:
+        position:
+          x: -1764.0
+          y: 142.5
+    12:
+      name: User Account
+      type: Identity
+      associated_assets:
+        lowPrivApps:
+          3: HR Manager Workstation
+        users:
+          6: Admin User
+      extras:
+        position:
+          x: 391.5
+          y: -313.5
+    13:
+      name: Cent User
+      type: Identity
+      associated_assets:
+        lowPrivApps:
+          4: Bank File Server
+        credentials:
+          11: Domain Credentials
+      extras:
+        position:
+          x: -1912.5
+          y: -786.0
+    17:
+      name: Local
+      type: ConnectionRule
+      associated_assets:
+        applications:
+          3: HR Manager Workstation
+          4: Bank File Server
+          5: CFO Workstation
+          2: Domain Controller
+      extras:
+        position:
+          x: -631.5
+          y: -921.0
+    18:
+      name: CFO User
+      type: Identity
+      associated_assets:
+        lowPrivApps:
+          5: CFO Workstation
+        execPrivApps:
+          5: CFO Workstation
+        readPrivData:
+          20: Browser Credential Store
+      extras:
+        position:
+          x: -571.5
+          y: -688.5
+    19:
+      name: Browser
+      type: Application
+      associated_assets:
+        hostApp:
+          5: CFO Workstation
+        containedData:
+          20: Browser Credential Store
+      extras:
+        position:
+          x: -966.0
+          y: -379.5
+    20:
+      name: Browser Credential Store
+      type: Data
+      associated_assets:
+        containingApp:
+          19: Browser
+          5: CFO Workstation
+        information:
+          21: Browser Credentials
+        readingIAMs:
+          18: CFO User
+      extras:
+        position:
+          x: -613.5
+          y: -486.0
+    21:
+      name: Browser Credentials
+      type: Credentials
+      associated_assets:
+        containerData:
+          20: Browser Credential Store
+      extras:
+        position:
+          x: -204.0
+          y: -558.0

@@ -1,0 +1,342 @@
+lang_file: ../org.mal-lang.minCoreLang-1.0.0.mar
+agents:
+  FIN6:
+    type: attacker
+    goals:
+    - Track Data:extract
+    - Purchase Request:extract
+    - SMB Server:deny
+    - Domain Controller:deny
+    - Web Server:deny
+    - POS System:deny
+    - Windows Workstation 1:deny
+    - Windows Workstation 2:deny
+    entry_points:
+    - WAN:accessUninspected
+    - External:assume
+    - Workstation 1 User:assume
+    - Windows Workstation 1:networkConnectUninspected
+model:
+  metadata:
+    name: fin6_phase1_and_2
+    langVersion: 1.0.0
+    langID: org.mal-lang.coreLang
+    malVersion: 0.1.0-SNAPSHOT
+    MAL-Toolbox Version: 1.1.3
+    info: Created by the mal-toolbox model python module.
+  assets:
+    0:
+      name: WAN
+      type: Network
+      associated_assets:
+        netConnections:
+          2: Outbound
+          4: In and Out
+      extras:
+        position:
+          x: 397.5
+          y: -2367.0
+    1:
+      name: LAN
+      type: Network
+      associated_assets:
+        netConnections:
+          3: Local
+      extras:
+        position:
+          x: 884.25
+          y: -1012.5
+    2:
+      name: Outbound
+      type: ConnectionRule
+      associated_assets:
+        networks:
+          0: WAN
+        outApplications:
+          6: Windows Workstation 1
+      extras:
+        position:
+          x: -79.5
+          y: -2376.0
+    3:
+      name: Local
+      type: ConnectionRule
+      associated_assets:
+        networks:
+          1: LAN
+        applications:
+          10: SMB Server
+          5: Web Server
+          6: Windows Workstation 1
+          7: Windows Workstation 2
+          8: POS System
+          9: Domain Controller
+      extras:
+        position:
+          x: 661.5
+          y: -1156.5
+    4:
+      name: In and Out
+      type: ConnectionRule
+      associated_assets:
+        networks:
+          0: WAN
+        applications:
+          5: Web Server
+      extras:
+        position:
+          x: 405.0
+          y: -2154.0
+    5:
+      name: Web Server
+      type: Application
+      associated_assets:
+        appConnections:
+          3: Local
+          4: In and Out
+        lowPrivAppIAMs:
+          11: External
+        receivedData:
+          28: Purchase Request
+        highPrivAppIAMs:
+          29: Domain Admin
+      extras:
+        position:
+          x: 670.5
+          y: -1794.0
+    6:
+      name: Windows Workstation 1
+      type: Application
+      associated_assets:
+        outgoingAppConnections:
+          2: Outbound
+        appConnections:
+          3: Local
+        lowPrivAppIAMs:
+          12: Workstation 1 User
+        vulnerabilities:
+          13: Named-pipe Impersonation
+        containedData:
+          14: LSASS
+          17: NTDS
+        highPrivAppIAMs:
+          29: Domain Admin
+          16: Workstation 1 Admin
+      extras:
+        position:
+          x: 196.5
+          y: -1854.0
+    7:
+      name: Windows Workstation 2
+      type: Application
+      associated_assets:
+        appConnections:
+          3: Local
+        highPrivAppIAMs:
+          29: Domain Admin
+      extras:
+        position:
+          x: 259.5
+          y: -1413.0
+    8:
+      name: POS System
+      type: Application
+      associated_assets:
+        appConnections:
+          3: Local
+        highPrivAppIAMs:
+          29: Domain Admin
+        containedData:
+          22: Track Data
+      extras:
+        position:
+          x: -373.5
+          y: -862.5
+    9:
+      name: Domain Controller
+      type: Application
+      associated_assets:
+        appConnections:
+          3: Local
+        highPrivAppIAMs:
+          29: Domain Admin
+      extras:
+        position:
+          x: -12.0
+          y: -1113.0
+    10:
+      name: SMB Server
+      type: Application
+      associated_assets:
+        appConnections:
+          3: Local
+        highPrivAppIAMs:
+          29: Domain Admin
+      extras:
+        position:
+          x: 234.0
+          y: -1239.0
+    11:
+      name: External
+      type: Identity
+      associated_assets:
+        lowPrivApps:
+          5: Web Server
+      extras:
+        position:
+          x: 819.0
+          y: -2206.5
+    12:
+      name: Workstation 1 User
+      type: Identity
+      associated_assets:
+        lowPrivApps:
+          6: Windows Workstation 1
+      extras:
+        position:
+          x: -496.5
+          y: -2470.5
+    13:
+      name: Named-pipe Impersonation
+      type: SoftwareVulnerability
+      defenses:
+        networkAccessRequired: 1.0
+        lowPrivilegesRequired: 1.0
+        highComplexityExploitRequired: 0.0
+      associated_assets:
+        application:
+          6: Windows Workstation 1
+      extras:
+        position:
+          x: -610.5
+          y: -2263.5
+    14:
+      name: LSASS
+      type: Data
+      associated_assets:
+        containingApp:
+          6: Windows Workstation 1
+        information:
+          15: Workstation 1 Admin Credentials
+      extras:
+        position:
+          x: -631.5
+          y: -1848.0
+    15:
+      name: Workstation 1 Admin Credentials
+      type: Credentials
+      associated_assets:
+        containerData:
+          14: LSASS
+        identities:
+          16: Workstation 1 Admin
+        hashes:
+          18: Hashed Workstation 1 Admin Credentials
+      extras:
+        position:
+          x: -1077.0
+          y: -1797.0
+    16:
+      name: Workstation 1 Admin
+      type: Identity
+      associated_assets:
+        highPrivApps:
+          6: Windows Workstation 1
+        credentials:
+          15: Workstation 1 Admin Credentials
+      extras:
+        position:
+          x: -669.0
+          y: -2043.0
+    17:
+      name: NTDS
+      type: Data
+      associated_assets:
+        containingApp:
+          6: Windows Workstation 1
+        information:
+          18: Hashed Workstation 1 Admin Credentials
+          31: Hashed Domain Admin Credentials
+      extras:
+        position:
+          x: -271.5
+          y: -1611.0
+    18:
+      name: Hashed Workstation 1 Admin Credentials
+      type: Credentials
+      associated_assets:
+        origCreds:
+          15: Workstation 1 Admin Credentials
+        containerData:
+          17: NTDS
+      extras:
+        position:
+          x: -1057.5
+          y: -1572.0
+    22:
+      name: Track Data
+      type: Data
+      associated_assets:
+        containingApp:
+          8: POS System
+      extras:
+        position:
+          x: -399.0
+          y: -670.5
+    28:
+      name: Purchase Request
+      type: Data
+      associated_assets:
+        receiverApp:
+          5: Web Server
+      extras:
+        position:
+          x: 1095.0
+          y: -1963.5
+    29:
+      name: Domain Admin
+      type: Identity
+      associated_assets:
+        highPrivApps:
+          5: Web Server
+          6: Windows Workstation 1
+          7: Windows Workstation 2
+          8: POS System
+          9: Domain Controller
+          10: SMB Server
+        credentials:
+          30: Domain Admin Credentials
+      extras:
+        position:
+          x: -264.0
+          y: -1392.0
+    30:
+      name: Domain Admin Credentials
+      type: Credentials
+      defenses:
+        notDisclosed: 1.0
+        notGuessable: 0.0
+      associated_assets:
+        identities:
+          29: Domain Admin
+        hashes:
+          31: Hashed Domain Admin Credentials
+      extras:
+        position:
+          x: -682.5
+          y: -1026.0
+    31:
+      name: Hashed Domain Admin Credentials
+      type: Credentials
+      defenses:
+        notGuessable: 0.0
+        notDisclosed: 1.0
+      associated_assets:
+        containerData:
+          17: NTDS
+        origCreds:
+          30: Domain Admin Credentials
+      extras:
+        position:
+          x: -846.0
+          y: -1231.5

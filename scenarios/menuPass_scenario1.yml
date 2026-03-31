@@ -1,0 +1,501 @@
+lang_file: ../org.mal-lang.minCoreLang-1.0.0.mar
+agents:
+  menuPass:
+    goals:
+    - Workstation 2 User Creds:extract
+    - Hashed Domain Admin Creds:extract
+    - Hashed Server 1 User Creds:30:extract
+    - Hashed Server 2 User Creds:31:extract
+    - Hashed Workstation 1 User Creds:32:extract
+    - Hashed Workstation 2 User Creds:extract
+    entry_points:
+    - MSP:accessUninspected
+    - MSP Admin:assume
+    type: attacker
+model:
+  metadata:
+    name: menuPass_scenario1
+    langVersion: 1.0.0
+    langID: org.mal-lang.coreLang
+    malVersion: 0.1.0-SNAPSHOT
+    MAL-Toolbox Version: 1.1.3
+    info: Created by the mal-toolbox model python module.
+  assets:
+    0:
+      name: WAN
+      type: Network
+      associated_assets:
+        netConnections:
+          1: Outbound
+      extras:
+        position:
+          x: -589.0
+          y: -733.0
+    1:
+      name: Outbound
+      type: ConnectionRule
+      associated_assets:
+        networks:
+          0: WAN
+        outApplications:
+          3: Windows Workstation 2
+          2: Windows Workstation 1
+      extras:
+        position:
+          x: -575.0
+          y: -623.0
+    2:
+      name: Windows Workstation 1
+      type: Application
+      associated_assets:
+        outgoingAppConnections:
+          1: Outbound
+        appConnections:
+          4: Local
+        highPrivAppIAMs:
+          27: Domain Admin
+          10: MSP Admin
+          15: Workstation 1 User
+        containedData:
+          18: SAM
+      extras:
+        position:
+          x: -652.0
+          y: -270.0
+    3:
+      name: Windows Workstation 2
+      type: Application
+      associated_assets:
+        outgoingAppConnections:
+          1: Outbound
+        appConnections:
+          4: Local
+        highPrivAppIAMs:
+          10: MSP Admin
+          27: Domain Admin
+        containedData:
+          34: SAM
+          11: LSASS Memory
+        lowPrivAppIAMs:
+          13: Workstation 2 User
+      extras:
+        position:
+          x: -486.0
+          y: -187.0
+    4:
+      name: Local
+      type: ConnectionRule
+      associated_assets:
+        applications:
+          2: Windows Workstation 1
+          3: Windows Workstation 2
+          6: Server 2
+          7: Server 1
+          5: Domain Controller
+        networks:
+          8: MSP
+      extras:
+        position:
+          x: -594.0
+          y: 205.0
+    5:
+      name: Domain Controller
+      type: Application
+      associated_assets:
+        appConnections:
+          4: Local
+        highPrivAppIAMs:
+          10: MSP Admin
+          27: Domain Admin
+        containedData:
+          14: NTDS.dit
+      extras:
+        position:
+          x: -338.0
+          y: 376.0
+    6:
+      name: Server 2
+      type: Application
+      associated_assets:
+        appConnections:
+          4: Local
+        highPrivAppIAMs:
+          10: MSP Admin
+        lowPrivAppIAMs:
+          17: Server 2 User
+        containedData:
+          23: SAM
+      extras:
+        position:
+          x: -1202.0
+          y: 22.0
+    7:
+      name: Server 1
+      type: Application
+      associated_assets:
+        appConnections:
+          4: Local
+        highPrivAppIAMs:
+          10: MSP Admin
+          27: Domain Admin
+        lowPrivAppIAMs:
+          16: Server 1 User
+        containedData:
+          26: SAM
+      extras:
+        position:
+          x: -1174.5
+          y: 315.0
+    8:
+      name: MSP
+      type: Network
+      associated_assets:
+        netConnections:
+          4: Local
+      extras:
+        position:
+          x: -41.0
+          y: 205.0
+    10:
+      name: MSP Admin
+      type: Identity
+      associated_assets:
+        highPrivApps:
+          3: Windows Workstation 2
+          6: Server 2
+          7: Server 1
+          2: Windows Workstation 1
+          5: Domain Controller
+      extras:
+        position:
+          x: -601.0
+          y: 106.0
+    11:
+      name: LSASS Memory
+      type: Data
+      associated_assets:
+        containingApp:
+          3: Windows Workstation 2
+        information:
+          12: Workstation 2 User Creds
+      extras:
+        position:
+          x: -228.0
+          y: -316.5
+    12:
+      name: Workstation 2 User Creds
+      type: Credentials
+      defenses:
+        notDisclosed: 1.0
+        notGuessable: 0.0
+      associated_assets:
+        containerData:
+          11: LSASS Memory
+        identities:
+          13: Workstation 2 User
+        hashes:
+          33: Hashed Workstation 2 User Creds
+          35: Hashed Workstation 2 User Creds
+      extras:
+        position:
+          x: 162.0
+          y: -480.0
+    13:
+      name: Workstation 2 User
+      type: Identity
+      associated_assets:
+        lowPrivApps:
+          3: Windows Workstation 2
+        credentials:
+          12: Workstation 2 User Creds
+      extras:
+        position:
+          x: 21.0
+          y: -202.0
+    14:
+      name: NTDS.dit
+      type: Data
+      associated_assets:
+        containingApp:
+          5: Domain Controller
+        information:
+          33: Hashed Workstation 2 User Creds
+          31: Hashed Server 2 User Creds
+          32: Hashed Workstation 1 User Creds
+          29: Hashed Domain Admin Creds
+          30: Hashed Server 1 User Creds
+      extras:
+        position:
+          x: -334.0
+          y: 539.0
+    15:
+      name: Workstation 1 User
+      type: Identity
+      associated_assets:
+        highPrivApps:
+          2: Windows Workstation 1
+        credentials:
+          19: Workstation 1 User Creds
+      extras:
+        position:
+          x: -1151.0
+          y: -267.0
+    16:
+      name: Server 1 User
+      type: Identity
+      associated_assets:
+        lowPrivApps:
+          7: Server 1
+        credentials:
+          24: Server 1 User Creds
+      extras:
+        position:
+          x: -1185.0
+          y: 174.0
+    17:
+      name: Server 2 User
+      type: Identity
+      associated_assets:
+        lowPrivApps:
+          6: Server 2
+        credentials:
+          21: Server 2 User Creds
+      extras:
+        position:
+          x: -1197.0
+          y: -90.0
+    18:
+      name: SAM
+      type: Data
+      associated_assets:
+        containingApp:
+          2: Windows Workstation 1
+        information:
+          20: Hashed Workstation 1 User Creds
+      extras:
+        position:
+          x: -846.0
+          y: -436.0
+    19:
+      name: Workstation 1 User Creds
+      type: Credentials
+      defenses:
+        notDisclosed: 1.0
+        notGuessable: 0.0
+      associated_assets:
+        identities:
+          15: Workstation 1 User
+        hashes:
+          20: Hashed Workstation 1 User Creds
+          32: Hashed Workstation 1 User Creds
+      extras:
+        position:
+          x: -1196.0
+          y: -398.0
+    20:
+      name: Hashed Workstation 1 User Creds
+      type: Credentials
+      associated_assets:
+        containerData:
+          18: SAM
+        origCreds:
+          19: Workstation 1 User Creds
+      extras:
+        position:
+          x: -1045.0
+          y: -609.0
+    21:
+      name: Server 2 User Creds
+      type: Credentials
+      defenses:
+        notDisclosed: 1.0
+        notGuessable: 0.0
+      associated_assets:
+        identities:
+          17: Server 2 User
+        hashes:
+          22: Hashed Server 2 User Creds
+          31: Hashed Server 2 User Creds
+      extras:
+        position:
+          x: -1424.0
+          y: -207.0
+    22:
+      name: Hashed Server 2 User Creds
+      type: Credentials
+      associated_assets:
+        origCreds:
+          21: Server 2 User Creds
+        containerData:
+          23: SAM
+      extras:
+        position:
+          x: -1839.0
+          y: -217.0
+    23:
+      name: SAM
+      type: Data
+      associated_assets:
+        containingApp:
+          6: Server 2
+        information:
+          22: Hashed Server 2 User Creds
+      extras:
+        position:
+          x: -1643.0
+          y: -18.0
+    24:
+      name: Server 1 User Creds
+      type: Credentials
+      defenses:
+        notDisclosed: 1.0
+        notGuessable: 0.0
+      associated_assets:
+        identities:
+          16: Server 1 User
+        origCreds:
+          25: Hashed Server 1 User Creds
+        hashes:
+          30: Hashed Server 1 User Creds
+      extras:
+        position:
+          x: -1583.0
+          y: 181.0
+    25:
+      name: Hashed Server 1 User Creds
+      type: Credentials
+      associated_assets:
+        hashes:
+          24: Server 1 User Creds
+        containerData:
+          26: SAM
+      extras:
+        position:
+          x: -2011.0
+          y: 171.0
+    26:
+      name: SAM
+      type: Data
+      associated_assets:
+        containingApp:
+          7: Server 1
+        information:
+          25: Hashed Server 1 User Creds
+      extras:
+        position:
+          x: -1695.0
+          y: 322.0
+    27:
+      name: Domain Admin
+      type: Identity
+      associated_assets:
+        highPrivApps:
+          2: Windows Workstation 1
+          3: Windows Workstation 2
+          7: Server 1
+          5: Domain Controller
+        credentials:
+          28: Domain Admin Creds
+      extras:
+        position:
+          x: -766.5
+          y: 637.5
+    28:
+      name: Domain Admin Creds
+      type: Credentials
+      defenses:
+        notDisclosed: 1.0
+        notGuessable: 0.0
+      associated_assets:
+        identities:
+          27: Domain Admin
+        origCreds:
+          29: Hashed Domain Admin Creds
+      extras:
+        position:
+          x: -751.5
+          y: 751.5
+    29:
+      name: Hashed Domain Admin Creds
+      type: Credentials
+      associated_assets:
+        hashes:
+          28: Domain Admin Creds
+        containerData:
+          14: NTDS.dit
+      extras:
+        position:
+          x: -741.0
+          y: 903.0
+    30:
+      name: Hashed Server 1 User Creds
+      type: Credentials
+      associated_assets:
+        origCreds:
+          24: Server 1 User Creds
+        containerData:
+          14: NTDS.dit
+      extras:
+        position:
+          x: 28.5
+          y: 873.0
+    31:
+      name: Hashed Server 2 User Creds
+      type: Credentials
+      associated_assets:
+        origCreds:
+          21: Server 2 User Creds
+        containerData:
+          14: NTDS.dit
+      extras:
+        position:
+          x: -298.5
+          y: 868.5
+    32:
+      name: Hashed Workstation 1 User Creds
+      type: Credentials
+      associated_assets:
+        origCreds:
+          19: Workstation 1 User Creds
+        containerData:
+          14: NTDS.dit
+      extras:
+        position:
+          x: 121.5
+          y: 723.0
+    33:
+      name: Hashed Workstation 2 User Creds
+      type: Credentials
+      associated_assets:
+        origCreds:
+          12: Workstation 2 User Creds
+        containerData:
+          14: NTDS.dit
+      extras:
+        position:
+          x: 166.5
+          y: 484.5
+    34:
+      name: SAM
+      type: Data
+      associated_assets:
+        containingApp:
+          3: Windows Workstation 2
+        information:
+          35: Hashed Workstation 2 User Creds
+      extras:
+        position:
+          x: -331.5
+          y: -451.5
+    35:
+      name: Hashed Workstation 2 User Creds
+      type: Credentials
+      associated_assets:
+        containerData:
+          34: SAM
+        origCreds:
+          12: Workstation 2 User Creds
+      extras:
+        position:
+          x: -156.0
+          y: -621.0

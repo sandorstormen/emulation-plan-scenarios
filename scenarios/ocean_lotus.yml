@@ -1,0 +1,172 @@
+lang_file: ../org.mal-lang.minCoreLang-1.0.0.mar
+agents:
+  OceanLotus:
+    goals:
+    - PDF Files:extract
+    entry_points:
+    - Hope Potter:attemptSocialEngineering
+    - WAN:accessUninspected
+    type: attacker
+model:
+  metadata:
+    name: ocean_lotus
+    langVersion: 1.0.0
+    langID: org.mal-lang.coreLang
+    malVersion: 0.1.0-SNAPSHOT
+    MAL-Toolbox Version: 1.1.3
+    info: Created by the mal-toolbox model python module.
+  assets:
+    1:
+      name: MacOS Workstation
+      type: Application
+      associated_assets:
+        appConnections:
+          5: Local
+        outgoingAppConnections:
+          6: Outbound
+        lowPrivAppIAMs:
+          7: hpotter Mac
+        containedData:
+          12: .ssh
+      extras:
+        position:
+          x: -579.0
+          y: 12.0
+    2:
+      name: Linux Server
+      type: Application
+      associated_assets:
+        appConnections:
+          5: Local
+        outgoingAppConnections:
+          6: Outbound
+        lowPrivAppIAMs:
+          10: hpotter Linux
+        containedData:
+          13: PDF Files
+      extras:
+        position:
+          x: -1326.0
+          y: 3.0
+    3:
+      name: WAN
+      type: Network
+      associated_assets:
+        netConnections:
+          6: Outbound
+      extras:
+        position:
+          x: -970.0
+          y: -327.0
+    4:
+      name: LAN
+      type: Network
+      associated_assets:
+        netConnections:
+          5: Local
+      extras:
+        position:
+          x: -1060.5
+          y: 259.5
+    5:
+      name: Local
+      type: ConnectionRule
+      associated_assets:
+        applications:
+          1: MacOS Workstation
+          2: Linux Server
+        networks:
+          4: LAN
+      extras:
+        position:
+          x: -1063.5
+          y: 121.5
+    6:
+      name: Outbound
+      type: ConnectionRule
+      associated_assets:
+        outApplications:
+          1: MacOS Workstation
+          2: Linux Server
+        networks:
+          3: WAN
+      extras:
+        position:
+          x: -1031.0
+          y: -124.0
+    7:
+      name: hpotter Mac
+      type: Identity
+      associated_assets:
+        lowPrivApps:
+          1: MacOS Workstation
+        users:
+          9: Hope Potter
+        readPrivData:
+          12: .ssh
+      extras:
+        position:
+          x: -51.0
+          y: -88.5
+    9:
+      name: Hope Potter
+      type: User
+      associated_assets:
+        userIds:
+          7: hpotter Mac
+      extras:
+        position:
+          x: -103.5
+          y: -388.5
+    10:
+      name: hpotter Linux
+      type: Identity
+      associated_assets:
+        lowPrivApps:
+          2: Linux Server
+        credentials:
+          11: id_rsa
+        readPrivData:
+          13: PDF Files
+      extras:
+        position:
+          x: -1602.0
+          y: 423.0
+    11:
+      name: id_rsa
+      type: Credentials
+      associated_assets:
+        containerData:
+          12: .ssh
+        identities:
+          10: hpotter Linux
+      extras:
+        position:
+          x: -415.5
+          y: 409.5
+    12:
+      name: .ssh
+      type: Data
+      associated_assets:
+        containingApp:
+          1: MacOS Workstation
+        information:
+          11: id_rsa
+        readingIAMs:
+          7: hpotter Mac
+      extras:
+        position:
+          x: -451.5
+          y: 228.0
+    13:
+      name: PDF Files
+      type: Data
+      associated_assets:
+        containingApp:
+          2: Linux Server
+        readingIAMs:
+          10: hpotter Linux
+      extras:
+        position:
+          x: -1615.5
+          y: -190.5

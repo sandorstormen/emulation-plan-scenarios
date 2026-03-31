@@ -1,0 +1,136 @@
+lang_file: ../org.mal-lang.minCoreLang-1.0.0.mar
+agents:
+  Blind Eagle:
+    type: attacker
+    goals:
+    - Bank Credentials:extract
+    entry_points:
+    - User:attemptSocialEngineering
+    - LAN:accessUninspected
+model:
+  metadata:
+    name: blind_eagle
+    langVersion: 1.0.0
+    langID: org.mal-lang.coreLang
+    malVersion: 0.1.0-SNAPSHOT
+    MAL-Toolbox Version: 1.1.1
+    info: Created by the mal-toolbox model python module.
+  assets:
+    0:
+      name: User
+      type: User
+      associated_assets:
+        userIds:
+          4: User Account
+      extras:
+        position:
+          x: -177.0
+          y: -63.0
+    1:
+      name: Windows 10 OS
+      type: Application
+      associated_assets:
+        hostHardware:
+          2: Windows Workstation
+        appExecutedApps:
+          3: Edge Browser
+        lowPrivAppIAMs:
+          4: User Account
+        outgoingAppConnections:
+          8: CR
+      extras:
+        position:
+          x: -70.0
+          y: -232.0
+    2:
+      name: Windows Workstation
+      type: Hardware
+      associated_assets:
+        sysExecutedApps:
+          1: Windows 10 OS
+      extras:
+        position:
+          x: 169.5
+          y: -399.0
+    3:
+      name: Edge Browser
+      type: Application
+      associated_assets:
+        hostApp:
+          1: Windows 10 OS
+        containedData:
+          6: Browser Credential Store
+        outgoingAppConnections:
+          8: CR
+        lowPrivAppIAMs:
+          4: User Account
+      extras:
+        position:
+          x: -553.0
+          y: -255.0
+    4:
+      name: User Account
+      type: Identity
+      associated_assets:
+        users:
+          0: User
+        lowPrivApps:
+          3: Edge Browser
+          1: Windows 10 OS
+        readPrivData:
+          6: Browser Credential Store
+        writePrivData:
+          6: Browser Credential Store
+      extras:
+        position:
+          x: -762.0
+          y: -58.5
+    5:
+      name: LAN
+      type: Network
+      associated_assets:
+        netConnections:
+          8: CR
+      extras:
+        position:
+          x: -87.0
+          y: -712.5
+    6:
+      name: Browser Credential Store
+      type: Data
+      associated_assets:
+        containingApp:
+          3: Edge Browser
+        information:
+          7: Bank Credentials
+        readingIAMs:
+          4: User Account
+        writingIAMs:
+          4: User Account
+      extras:
+        position:
+          x: -762.0
+          y: -397.5
+    7:
+      name: Bank Credentials
+      type: Credentials
+      associated_assets:
+        containerData:
+          6: Browser Credential Store
+      extras:
+        position:
+          x: -637.5
+          y: -559.5
+    8:
+      name: CR
+      type: ConnectionRule
+      associated_assets:
+        outApplications:
+          3: Edge Browser
+          1: Windows 10 OS
+        networks:
+          5: LAN
+      extras:
+        position:
+          x: -144.0
+          y: -451.5
