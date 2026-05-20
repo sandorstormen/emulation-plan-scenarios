@@ -339,11 +339,3 @@ model:
     langVersion: 1.0.0
     malVersion: 0.1.0-SNAPSHOT
     name: sandworm_scenario1
-rewards:
-  by_asset_name:
-    arrakis Users Folder:
-      deny: 100
-    gammu Users Folder:
-      deny: 100
-    quadra Users Folder:
-      deny: 100
