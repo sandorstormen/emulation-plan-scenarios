@@ -359,7 +359,7 @@ model:
       type: Application
   metadata:
     MAL-Toolbox Version: 1.2.1
-    info: Created by the mal-toolbox model python module.
+    info: Models the emulation plan found at https://github.com/center-for-threat-informed-defense/adversary_emulation_library/tree/master/turla/Emulation_Plan/Carbon_Scenario
     langID: org.mal-lang.coreLang
     langVersion: 1.0.0
     malVersion: 0.1.0-SNAPSHOT
