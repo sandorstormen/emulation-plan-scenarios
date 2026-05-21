@@ -83,7 +83,7 @@ KRBTGT NTLM Hash:read
 KRBTGT NTLM Hash:extract
 KRBTGT NTLM Hash:attemptUse
 KRBTGT NTLM Hash:use
-# --- Include guessCredentialsFromHash? ---
+# --- guessCredentialsFromHash not included since we got admin creds from LSASS Memory ---
 Win10 1903 Workstation 2:specificAccessRead
 Outlook:attemptRead
 Outlook:successfulRead
