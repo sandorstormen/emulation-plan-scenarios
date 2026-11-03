@@ -1,0 +1,14 @@
+# Keep only the free-text descriptions of the emulation plans (Markdown),
+# plus the license and notice files. Everything else (payloads, source code,
+# binaries, archives, images, build output, ...) is ignored.
+*
+!*/
+!.gitignore
+!*.md
+!LICENSE*
+!NOTICE*
+!*.png
+!*.jpg
+!*.jpeg
+
+.DS_Store
